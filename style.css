@@ -1,0 +1,117 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.head1 {
+  word-spacing: normal;
+}
+.head {
+  word-spacing: 5em;
+}
+.opmaak {
+  display: grid; /* Zet de container in grid-modus */
+  grid-template-columns: repeat(7, 1fr); /* Zet 5 gelijke kolommen */
+  gap: 10px; /* Ruimte tussen de kolommen */
+  padding: 20px;
+  justify-items: center; /* Horizontaal centreren van de items (optioneel) */
+  align-items: center; /* Verticaal centreren van de items */
+}
+header {
+  background-color: #aeaf86;
+  padding: 1em;
+  word-spacing: 2em;
+  background-size: cover;
+  max-width: 100%;
+  border: 3px solid black;
+  text-align: left;
+  color: black;
+}
+h1 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.missie {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.maximg {
+  width: 100%;
+}
+
+.login {
+  color: black;
+  border: 1px solid black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .mobile {
+    display: none;
+  }
+  nav div a:not(.mobile) {
+    display: inline;
+  }
+}
+
+.watwijdoen {
+  display: grid; /* Zet de container in grid-modus */
+  grid-template-columns: 1fr 2fr; /* Twee kolommen: 1/3 voor afbeelding, 2/3 voor tekst */
+  gap: 20px; /* Ruimte tussen de kolommen */
+  align-items: center; /* Zorg dat afbeelding en tekst verticaal gecentreerd worden */
+  padding: 20px;
+}
+.image img {
+  max-width: 100%; /* Zorg dat de afbeelding niet buiten de container gaat */
+  height: auto; /* Behoud de originele verhoudingen */
+  border-radius: 8px; /* Optioneel: afgeronde hoeken */
+}
+.tekst {
+  text-align: left; /* Zorg dat de tekst links is uitgelijnd */
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.footer {
+  display: grid; /* Zet de container in grid-modus */
+  grid-template-columns: repeat(5, 1fr); /* Zet 5 gelijke kolommen */
+  gap: 10px; /* Ruimte tussen de kolommen */
+  padding: 20px;
+  justify-items: center; /* Horizontaal centreren van de items (optioneel) */
+  align-items: center; /* Verticaal centreren van de items */
+}
+.footerlink {
+  text-align: center; /* Centreer de tekst in elk item */
+  color: white;
+}
+
+.copyright {
+  padding-left: 20px;
+  padding-top: 10px;
+}
