@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 10px;
+        }
+        
+        .post img {
+            width: 60px;
+            border-radius: 50%;
+        }
+        button {
+            background-color: blue;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            
+        }
+        textarea {
+            border-radius: 10px;
+            border: none;
+            background-color: aliceblue;
+            width: 98%;
+            height: 150px;
+            padding: 20px;
+            margin-bottom: 10px;
+            padding: 20px;
+
+        }
+        .button {
+            text-align: end;
+            margin-right: 0%;
+        }
+        .posts {
+            background-color: #F5F2FF;
+            padding: 10px;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .comment {
+            padding-bottom: 40px;
+        }
+     
+       
+    </style>
+</head>
+<body>
+    <h1>Create post</h1>
+    <p>What's Happening</p>
+    <form id="formAdd" action="">
+        <div>
+            
+            <textarea type="text"  placeholder="Share your thoughts..."></textarea>
+        </div>
+        <div class="button">
+            <button id="buttonAdd" type="submit" >post</button>
+        </div>
+    </form>
+
+    <h2>Your Timeline</h2>
+    <div class="posts">
+        <div class="post">
+            <img src="afbeeldingen/profiel.webp" alt="profielfoto">
+            <h4>2 minuten geleden</h4>
+            <h3>Gebruikersnaam</h3>
+            <p>Just finished my morning run. The weather is perfect today!</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener('submit', (e) => {
+            e.preventDefault();
+            let text = document.querySelector("textarea").value;
+
+            let div = document.createElement('div');
+                    div.classList.add('comment');
+
+                    let img = document.createElement('img');
+                    img.setAttribute('src', "afbeeldingen/profiel.webp" );
+                    img.setAttribute("alt", "profile");
+
+                    let h4 = document.createElement('h4');
+                    h4.innerHTML = "1 minuut geleden"
+
+                    let h3 = document.createElement("h3")
+                    h3.innerHTML = "@goodbytes";
+
+                    let p = document.createElement("p")
+                    p.innerHTML = text;
+                    
+
+                    
+                   
+
+                    div.appendChild(img);
+                    div.appendChild(h4);
+                    div.appendChild(h3);
+                    div.appendChild(p);
+                    
+
+                    document.querySelector(".post").prepend(div);
+                    document.querySelector("textarea").value = "";
+            
+        
+        })
+        
+        
+
+    </script>
+    
+</body>
+</html>
